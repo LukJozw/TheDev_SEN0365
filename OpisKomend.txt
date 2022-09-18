@@ -1,0 +1,25 @@
+﻿Z powodu jeszcze niedoskonałego interface ze strony Arduino wszystkie komendy poprzedzamy znakiem podłogi "_"
+lub jakimkolwiek innym znakiem. Chodzi o to by ważny string nie startował od zera bo nic nie wejdzie.
+
+Komendy wyzwalania poszczególnych kanałów zaczynają się od "F"
+Następnie wpisuje się wartość po dwukropku tego co się chce odczytać.
+
+1.  _F:1        405-425 nm
+2.  _F:2        435-455 nm
+3.  _F:3        470-490 nm
+4.  _F:4        505-525 nm
+5.  _F:5        545-565 nm
+6.  _F:6        580-600 nm
+7.  _F:7        620-640 nm
+8.  _F:8        670-690 nm
+9.  _F:Clear
+10. _F:NIR
+11. _F:Flicker  (n.o.)
+12. _F:All		odczytuje wszystkie kanały i pomimo pozorów że nie, jest przydatny
+
+Nastawy rejestrów wykonuje się poniższymi komendami, dodając znak = i podając liczbę całkowitą
+z zakresu dozwolonego np żeby znastawić zegar na 123 wpisujemy  _F:Time=123
+
+_F:Time         //1-255
+_F:Gain         //0-10
+_F:Step         //0-65534  
